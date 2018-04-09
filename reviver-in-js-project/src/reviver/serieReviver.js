@@ -1,0 +1,53 @@
+import {Serie} from "../entities/serie"
+import {ItemAbstractReviver} from '@rebolon/json-reviver/src'
+
+export class SerieReviver extends ItemAbstractReviver
+{
+    /**
+     *
+     * @returns {string}
+     */
+    getNodeName() {
+        return 'serie'
+    }
+
+    /**
+     *
+     * @returns {Object}
+     */
+    getNewEntity() {
+        return new Serie()
+    }
+
+    /**
+     * {@inheritdoc}
+     * for this kind of json:
+     * {
+     *   "serie": {
+     *     "name": "The serie name"
+     *   }
+     * }
+     */
+    getEzPropsName()
+    {
+        return ['id', 'name', ]
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    getManyRelPropsName()
+    {
+        // for instance i don't want to allow the creation of a serie with all embeded books, this is not a usual way of working
+        // that's why i don't add books here
+        return {}
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    getOneRelPropsName()
+    {
+        return {}
+    }
+}

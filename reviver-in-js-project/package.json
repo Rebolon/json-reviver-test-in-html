@@ -1,0 +1,40 @@
+{
+  "name": "test-reviver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/encore dev",
+    "build:windows": "node_modules\\.bin\\encore dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "@rebolon/json-reviver": "^0.0.4"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.19.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "ie >= 9"
+            ]
+          },
+          "debug": true
+        }
+      ]
+    ],
+    "plugins": [
+      "babel-plugin-syntax-dynamic-import"
+    ]
+  }
+}

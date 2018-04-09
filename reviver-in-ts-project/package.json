@@ -1,0 +1,26 @@
+{
+  "name": "test-reviver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/webpack",
+    "build:windows": "node_modules\\.bin\\webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rebolon/json-reviver": "0.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "~6.0.60",
+    "codelyzer": "^4.2.1",
+    "ts-loader": "^4.1.0",
+    "ts-node": "~4.1.0",
+    "tslint": "~5.9.1",
+    "typescript": "~2.5.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  }
+}
