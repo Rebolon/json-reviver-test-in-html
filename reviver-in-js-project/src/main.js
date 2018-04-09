@@ -13,7 +13,7 @@ const oneBook = {
 const serieReviver = new SerieReviver()
 const bookReviver = new BookReviver(serieReviver)
 
-// @todo the AbstractReviver should be able to auto-select the root node if
 const book = bookReviver.main(oneBook.book)
 
+window['book'] = book
 console.log(book)
